@@ -7,4 +7,4 @@ rescue LoadError
   require 'nico'
 end
 
-Nico.run *ARGV # might pass token and room_id here
+Nico.run subdomain: ENV['CAMPFIRE_SUBDOMAIN'], room_id: ENV['CAMPFIRE_ROOM_ID'], token: ENV['CAMPFIRE_TOKEN']

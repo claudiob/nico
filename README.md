@@ -18,7 +18,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+From the command line run:
+
+    $ nico
+
+Remember to define the following environment variables: `CAMPFIRE_SUBDOMAIN`, `CAMPFIRE_ROOM_ID` and `CAMPFIRE_TOKEN`.
 
 ## Contributing
 
