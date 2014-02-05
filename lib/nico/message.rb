@@ -3,6 +3,8 @@ require 'nico/matchers/daft_punk_matcher'
 
 module Nico
   class Message
+    attr_reader :body
+
     def initialize(json)
       # also available: id, user_id, starred, created_at, type, room_id
       @body = json['body'] || ''

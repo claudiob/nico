@@ -14,8 +14,8 @@ module Nico
   # @param [String] token The token of the Campfire user to interact with
   #
   # @see https://github.com/37signals/campfire-api for Campfire API documentation
-  def self.run(subdomain, room_id, token)
-    Room.new(subdomain, room_id, token).listen do |room, request|
+  def self.run(options = {})
+    Room.new(options).listen do |room, request|
       room.respond_with request.response if request.relevant?
     end
   end
