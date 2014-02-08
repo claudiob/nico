@@ -1,5 +1,9 @@
 require 'nico/message'
+
+alias :oldputs :puts
+def puts(*args); end
 require 'yajl/http_stream'
+alias :puts :oldputs
 
 module Nico
   class Listener
