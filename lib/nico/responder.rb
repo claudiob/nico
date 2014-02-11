@@ -10,8 +10,8 @@ module Nico
       @request['Content-Type'] = 'application/json'
     end
 
-    def push(response)
-      @request.body = {message: {body: response}}.to_json
+    def say(message)
+      @request.body = {message: {body: message}}.to_json
       @http.request @request
     end
   end
